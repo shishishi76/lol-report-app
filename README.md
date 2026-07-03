@@ -34,3 +34,55 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### 予定
+ディレクトリ構成
+src
+├── app
+│   ├── (public)              # 誰でも見られるページ
+│   │   ├── page.tsx
+│   │   ├── login
+│   │   ├── signup
+│   │   └── players
+│   │       └── [gameName]
+│   │           └── [tagLine]
+│   │
+│   ├── (protected)           # ログイン必須ページ
+│   │   ├── profile
+│   │   ├── reports
+│   │   └── settings
+│   │
+│   ├── layout.tsx
+│   └── globals.css
+│
+├── components
+│   ├── common
+│   ├── layout
+│   ├── player
+│   └── report
+│
+├── lib
+│   ├── amplify.ts
+│   ├── auth.ts
+│   ├── api.ts
+│   └── riot.ts
+│
+├── hooks
+│   ├── useAuth.ts
+│   └── usePlayer.ts
+│
+├── services
+│   ├── auth.service.ts
+│   ├── player.service.ts
+│   └── report.service.ts
+│
+├── types
+│   ├── auth.ts
+│   ├── player.ts
+│   └── report.ts
+│
+├── utils
+│   ├── date.ts
+│   └── validation.ts
+│
+└── middleware.ts
