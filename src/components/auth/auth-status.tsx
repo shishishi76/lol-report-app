@@ -39,8 +39,11 @@ export function AuthStatus() {
 
   if (authState.status === "authenticated") {
     return (
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center justify-end gap-3">
         <span className="hidden max-w-48 truncate text-xs text-slate-400 sm:block">{authState.label}</span>
+        <Link href="/account-link" className="rounded-xl border border-white/10 px-4 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-white/20 hover:bg-white/5">
+          LoLアカウント連携
+        </Link>
         <Link href="/players" className="rounded-xl bg-[#c99b3f] px-4 py-2.5 text-sm font-bold text-[#071019] transition hover:bg-[#dfb756]">
           プレイヤー検索
         </Link>
